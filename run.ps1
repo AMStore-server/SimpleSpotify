@@ -301,8 +301,8 @@ function Get-Link {
     )
 
     switch ($mirror) {
-        $true { return "https://aimodsstore.github.io/SimpleSpotify" + $endlink }
-        default { return "https://raw.githubusercontent.com/AIMODSstore/SimpleSpotify/main" + $endlink }
+        $true { return "https://amstore-server.github.io/SimpleSpotify" + $endlink }
+        default { return "https://raw.githubusercontent.com/AMStore-server/SimpleSpotify/main" + $endlink }
     }
 }
 
