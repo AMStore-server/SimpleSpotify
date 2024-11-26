@@ -739,17 +739,6 @@ if ($spotifyInstalled) {
         if ($confirm_spoti_recomended_over -or $confirm_spoti_recomended_uninstall) {
             Write-Host ($lang).NewV`n
         }
-        if (!($confirm_spoti_recomended_over) -and !($confirm_spoti_recomended_uninstall)) {
-            do {
-                Write-Host (($lang).NewV2 -f $offline, $online)
-                $ch = Read-Host -Prompt (($lang).NewV3 -f $offline)
-                Write-Host
-                if (!($ch -eq 'n' -or $ch -eq 'y')) {
-                    incorrectValue
-                }
-            }
-            while ($ch -notmatch '^y$|^n$')
-        }
         if ($confirm_spoti_recomended_over -or $confirm_spoti_recomended_uninstall) { $ch = 'n' }
         if ($ch -eq 'y') { $upgrade_client = $false }
         if ($ch -eq 'n') {
